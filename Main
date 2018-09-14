@@ -1,0 +1,31 @@
+package my10;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		while (true){
+		  System.out.println("$$$$$$$$$$$$$$$$$$$");
+		  System.out.println("1: 字符数、词数、行数");
+		  System.out.println(" 输入命令：");
+		  Scanner input=new Scanner(System.in);
+		  String m=input.nextLine();
+		  String arr[]=m.split("\\s");
+
+		try{
+		switch(arr[0]){
+		  case"1":Counter.counter(); break; 		  
+		 }
+		} 
+		catch (FileNotFoundException e) {
+		  System.out.println("\n找不到文件");
+		 } 
+		  catch (Exception e) {
+		  e.printStackTrace();
+		}
+      }
+   }
+}
+
