@@ -1,0 +1,33 @@
+package my10;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+		while (true){
+		System.out.println("\n-----3116008807 WC-----");
+		System.out.println(" -all 返回字符数、词数、行数 -----");
+		System.out.print(" 请输入命令：");
+		Scanner input=new Scanner(System.in);
+
+		String m=input.nextLine();
+		String arr[]=m.split("\\s");
+
+		try{
+		switch(arr[0]){
+		case"-all":Counter.counter(); break; 
+		default:System.out.println("\n不存在该功能！");break;
+		}
+		} catch (FileNotFoundException e) {
+		System.out.println("\n错误：找不到输入路径文件！");
+		} 
+		catch (Exception e) {
+		e.printStackTrace();
+		}
+		}
+		}
+}
+
